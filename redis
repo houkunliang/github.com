@@ -1,0 +1,20 @@
+1,安装Linx虚拟机，系统CentOS,SSH客户端SecureCRT
+2,Linx在线安装gcc，>yum install gcc-c++
+一路选y
+3,下载redis.tar.gz安装包,使用Filezilla上传到Linx,root目录
+4,解压文件>tar -axvf redis.tar.gz
+5,进入redis目录，编译>make
+6,安装,指定安装目录>make PREFIX=/usr/local/redis install
+7，进入安装完成的目录>cd /usr/local/redis
+8,返回解压安装路径>cd ~        >ll         >cd redis-xxx
+9,拷贝redis.conf >cp redis.conf /usr/local/redis
+10,>cd /usr/local/redis ，>ll   安装完成
+11,修改配置文件>vim redis.conf，进入编辑模式
+12，daemonize false 改为 true
+13,启动redis >./bin/redis-server ./redis.conf
+14,测试启动 ps -f | grep -i redis,默认端口6379
+15,停止启动 >./bin/redis-cli shutdown
+16,>./bin/redis-cli           >ping
+17,存值>set name xxx，取值>get name，删除>del name，查看所有>keys *
+
+ /etc/sysconfig/iptables  防火墙位置
