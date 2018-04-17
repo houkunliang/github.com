@@ -22,6 +22,6 @@
 
  /etc/rc.d/init.d/iptables save                           保存
  
- 修改redis.cnf 配置文件 127.0.0.1 注释掉
+ 修改redis.conf 配置文件 127.0.0.1 注释掉
  
 9、使用redis  desktop manager连接redis
