@@ -17,7 +17,7 @@ git init
 	链接到远程仓库 git 
 	[remote rm origin 
 	git remote add origin ****]
-	克隆远程库到本地库 git clone
+	克隆远程库到本地库 git clone ****
 
 4.接下来是简单的提交操作
 第一步 git pull 更新服务器代码
