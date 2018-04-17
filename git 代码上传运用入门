@@ -14,7 +14,9 @@ git init
 	添加密钥到ssh：ssh-add 文件名
 	需要之前输入密码。
 	在github上添加ssh密钥，这要添加的是“id_rsa.pub”里面的公钥。
-	链接到远程仓库 git remote add origin ****
+	链接到远程仓库 git 
+	[remote rm origin 
+	git remote add origin ****]
 	克隆远程库到本地库 git clone
 
 4.接下来是简单的提交操作
