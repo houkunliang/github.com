@@ -1,0 +1,24 @@
+Linux系统下安装mongoDb：
+○1下载并解压缩mongoDb安装包：
+cd  /usr/local
+wget  https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.0.3.tgz
+tar  -xvf  mongodb-linux-x86_64-3.0.3.tgz
+cd   mongodb-linux-x86_64-3.0.3
+mv  mongodb-linux-x86_64-3.0.3  mongodb
+
+○2在/usr/local/mongodb目录下创建mongo.conf文件内容如下：
+dbpath=/data/mongodb
+logpath=/usr/local/mongodb/mongodb.log
+port = 27017
+fork = true
+
+○3然后执行 mkdir  -p  /data/mongodb
+○4在/usr/local/mongodb目录下创建start启动脚本内容如下：
+/usr/local/mongodb/bin/mongod --config=/usr/local/mongodb/mongo.conf
+执行start脚本，出现如下图所示内容则启动成功
+[about to fork child process, waiting until server is ready for connections.
+forked process: 5122
+child process started successfully, parent exiting]
+ 
+Stop脚本：
+ps -ef|grep mongo.conf|grep -v grep|awk '{printf $2}'|xargs kill -9
