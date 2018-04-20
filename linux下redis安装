@@ -22,7 +22,9 @@
 
  /etc/rc.d/init.d/iptables save                           保存
  
- 修改redis.conf 配置文件 127.0.0.1 注释掉 且一定要改为后台运行不然要报错 daemonize yes
- 设置 配置文件密码 requirepass ****
+修改redis.conf 配置文件 
+bind 127.0.0.1 改成 bind 0.0.0.0 允许远程接入
+设置后台运行 daemonize yes
+设置 配置文件密码 requirepass ****（可选）
  
 9、使用redis  desktop manager连接redis
