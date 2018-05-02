@@ -1,0 +1,11 @@
+接收 ?access_token=345cc4ec5e224e45beed195dd8782ca4&lotteryId=afb6599d29334e2bb2c181077d6f5b46&roomId=5ad8db3c26d4d10709a07c23 
+这样的参数：例子
+	@RequestMapping(value = "/test",method = RequestMethod.POST, produces = "text/html;charset=UTF-8")
+	public HashMap test(@RequestParam HashMap<String, Object> setMap) {
+		return setMap;
+	}
+接收 json 字符串 {"name":"1"}
+	@RequestMapping(value = "/test",method = RequestMethod.POST)
+	public HashMap test(@RequestBody HashMap<String, Object> setMap) {
+		return setMap;
+	}
